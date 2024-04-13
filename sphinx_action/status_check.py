@@ -20,7 +20,7 @@ CheckAnnotation = collections.namedtuple(
 
 def output_annotation(annotation, where_to_print=sys.stdout):
     level_to_command = {
-        AnnotationLevel.WARNING: "warning",
+        AnnotationLevel.WARNING: "error",
         AnnotationLevel.FAILURE: "error",
     }
 
