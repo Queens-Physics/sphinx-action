@@ -134,6 +134,9 @@ def build_docs(build_command, docs_directory):
     with open(log_file, "r") as f:
         annotations = parse_sphinx_warnings_log(f.readlines())
 
+    if len(annotations) > 0:
+        return_code = 1  # treat warnings as failures
+
     return return_code, annotations
 
 
